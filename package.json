@@ -1,0 +1,9 @@
+{
+  "name": "ios",
+  "version": "1.0.0",
+  "description": "semfmobile",
+  "main": "index.js",
+  "repository": "https://github.com/semfrelease/ios.git",
+  "author": "唐建雄 <jianxiong.tang@datacvg.com>",
+  "license": "MIT"
+}
