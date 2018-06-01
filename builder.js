@@ -23,7 +23,7 @@ if (!which('git')) {
 // 将文件添加到本地仓库，这作为第一次提交的状态
 exec('git add .');
 
-if (exec('git commit -am "更新发布文件"').code !== 0) {
+if (exec('git commit -am "更新发布文件' + args.version.replace(/'/g, '') + '"').code !== 0) {
     echo('Error: Git commit failed');
     exit(1);
 }
