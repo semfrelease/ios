@@ -1,6 +1,6 @@
 /**
  * 命令格式
- * npm run start --version "'3.0'" --appname SEMPMobile_dev --gitname semprelease --gitpwd password
+ * npm run start -- --version "'3.0'" --appname SEMPMobile_dev --gitname semprelease --gitpwd password
  */
 
 const fs = require('fs');
@@ -28,13 +28,15 @@ if (exec('git commit -am "更新发布文件"').code !== 0) {
     exit(1);
 }
 
-if (exec('git remote add origin https://' + args.gitname + ':' + args.gitpwd + '@github.com/semfrelease/ios.git').code !== 0) {
-    echo('Error: Git remote add failed');
-    exit(1);
+if (exec('git remote show semfmobileorigin').code !== 0) {
+    if (exec('git remote add semfmobileorigin https://' + args.gitname + ':' + args.gitpwd + '@github.com/semfrelease/ios.git').code !== 0) {
+        echo('Error: Git remote add failed');
+        exit(1);
+    }
 }
 
-if (exec('git push origin master').code !== 0) {
-    echo('Error: Git push origin master failed');
+if (exec('git push semfmobileorigin master').code !== 0) {
+    echo('Error: Git push semfmobileorigin master failed');
     exit(1);
 }
 
