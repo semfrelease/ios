@@ -5,5 +5,13 @@
   "main": "index.js",
   "repository": "https://github.com/semfrelease/ios.git",
   "author": "唐建雄 <jianxiong.tang@datacvg.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "scripts": {
+    "start": "node builder.js"
+  },
+  "dependencies": {
+    "minimist": "^1.2.0",
+    "shelljs": "^0.8.2"
+  },
+  "devDependencies": {}
 }
