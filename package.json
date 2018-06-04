@@ -7,7 +7,9 @@
   "author": "唐建雄 <jianxiong.tang@datacvg.com>",
   "license": "MIT",
   "scripts": {
-    "start": "node builder.js"
+    "start": "node builder.js",
+    "release:dev": "npm run start -- --appname SEMPMobile_dev --gitname semprelease",
+    "release:standard": "node builder.js --appname SEMPMobile_standard --gitname semprelease"
   },
   "dependencies": {
     "minimist": "^1.2.0",

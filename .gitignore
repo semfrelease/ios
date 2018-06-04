@@ -8,7 +8,6 @@
 out
 gen
 node_modules/
-dist/
 .cache/
 yarn-error*
 npm-debug*
