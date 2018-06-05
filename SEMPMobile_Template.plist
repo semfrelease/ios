@@ -11,7 +11,7 @@
 					<key>kind</key>
 					<string>software-package</string>
 					<key>url</key>
-					<string>http://semp.datacvg.com/mobile/${version}/${appName}.ipa</string>
+					<string>http://semp.datacvg.com/mobile/${appName}/${version}/SEMPMobile_${appName}.ipa</string>
 				</dict>
 				<dict>
 					<key>kind</key>

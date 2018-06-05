@@ -1,6 +1,6 @@
 /**
  * 命令格式
- * npm run start -- --version "'3.0'" --appname SEMPMobile_dev --gitname semprelease --gitpwd password
+ * npm run start -- --version "'3.0'" --appname dev --gitname semprelease --gitpwd password
  */
 
 const fs = require('fs');
@@ -41,5 +41,4 @@ if (exec('git push origin master').code !== 0) {
     echo('Error: Git push origin master failed');
     exit(1);
 }
-
 console.dir('发布成功。');
