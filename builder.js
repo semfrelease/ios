@@ -28,17 +28,18 @@ if (exec('git commit -am "更新发布文件' + args.version.replace(/'/g, '') +
     exit(1);
 }
 
-console.log('状态' + exec('git remote show origin').code);
+// console.log('状态' + exec('git remote show origin').code);
 
-if (exec('git remote show origin').code !== 0) {
-    if (exec('git remote add origin https://' + args.gitname + ':' + args.gitpwd + '@github.com/semfrelease/ios.git').code !== 0) {
-        echo('Error: Git remote add failed');
-        exit(1);
-    }
-}
+// if (exec('git remote show origin').code !== 0) {
+//     if (exec('git remote add origin https://' + args.gitname + ':' + args.gitpwd + '@github.com/semfrelease/ios.git').code !== 0) {
+//         echo('Error: Git remote add failed');
+//         exit(1);
+//     }
+// }
 
-if (exec('git push origin master').code !== 0) {
-    echo('Error: Git push origin master failed');
-    exit(1);
-}
+// if (exec('git push origin master').code !== 0) {
+//     echo('Error: Git push origin master failed');
+//     exit(1);
+// }
+
 console.dir('发布成功。');
