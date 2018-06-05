@@ -13,7 +13,7 @@ xml = xml.replace(/\${version}/g, args.version.replace(/'/g, ''));
 xml = xml.replace(/\${appName}/g, args.appname);
 
 
-fs.writeFileSync('dist/' + args.appname + '.plist', xml);
+fs.writeFileSync('dist/SEMPMobile_' + args.appname + '.plist', xml);
 
 if (!which('git')) {
     echo('Sorry, this script requires git');
