@@ -11,6 +11,7 @@ var args = require('minimist')(process.argv.slice(2));
 var xml = fs.readFileSync('SEMPMobile_Template.plist', 'utf8');
 xml = xml.replace(/\${version}/g, args.version.replace(/'/g, ''));
 xml = xml.replace(/\${appName}/g, args.appname);
+xml = xml.replace(/\${name}/g, args.name);
 
 
 fs.writeFileSync('dist/SEMPMobile_' + args.appname + '.plist', xml);
