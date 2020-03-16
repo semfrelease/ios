@@ -12,7 +12,7 @@
     "release:standard": "node builder.js --appname SEMPMobile_standard --gitname semprelease"
   },
   "dependencies": {
-    "minimist": "^1.2.0",
+    "minimist": "^1.2.2",
     "shelljs": "^0.8.2"
   },
   "devDependencies": {}
